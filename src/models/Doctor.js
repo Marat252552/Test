@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 
+
+
 const DoctorSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -11,7 +13,12 @@ const DoctorSchema = new mongoose.Schema({
     },
     slots: {
         type: [String],
-        // default: ['']
+        default: [
+            '10 05 2023 09:00:00 GMT+3',
+            '10 05 2023 12:00:00 GMT+3',
+            '10 05 2023 15:00:00 GMT+3',
+            '10 05 2023 18:00:00 GMT+3'
+        ]
     }
 })
 
